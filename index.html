@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <style>
-    /* --- CSS tạm thời; bạn có thể yêu cầu chỉnh sau --- */
+    /* --- CSS chung; bạn có thể điều chỉnh thêm nếu cần --- */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f9f9;
@@ -22,6 +22,8 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       border-radius: 5px;
     }
+
+    /* HEADER */
     header {
       text-align: center;
       margin-bottom: 2rem;
@@ -35,7 +37,8 @@
       font-size: 1.125rem;
       color: #555;
     }
-    /* Phần Giới Thiệu */
+
+    /* PHẦN GIỚI THIỆU */
     .intro {
       background-color: #f1f8ff;
       border-left: 4px solid #004080;
@@ -61,7 +64,8 @@
       margin-bottom: 0.5rem;
       list-style: disc inside;
     }
-    /* Phần Nội Dung (PDF) */
+
+    /* PHẦN NỘI DUNG (PDF) */ 
     .content h2 {
       font-size: 1.75rem;
       color: #004080;
@@ -72,13 +76,23 @@
     .content p {
       margin-bottom: 1rem;
     }
+    /* Container cho PDF để tạo hiệu ứng nổi bật */
+    .pdf-container {
+      background-color: #eaf3fc;
+      border: 1px solid #004080;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
     .pdf-viewer {
       width: 100%;
-      height: 800px;
-      border: 1px solid #ccc;
+      height: 700px;
+      border: none;
       border-radius: 4px;
     }
-    /* Phần Tài Liệu Liên quan */
+
+    /* PHẦN TÀI LIỆU LIÊN QUAN */
     .related h2 {
       font-size: 1.75rem;
       color: #004080;
@@ -96,14 +110,25 @@
     .related a:hover {
       text-decoration: underline;
     }
-    /* Footer đơn giản */
+
+    /* FOOTER */
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #777;
+      color: #fff;
+      background-color: #004080;  /* đổi thành tông xanh đậm */
       margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
+      padding: 1rem 0;
+      border-radius: 0 0 5px 5px;
+    }
+    footer p {
+      margin: 0;
+    }
+    footer a {
+      color: #ffe082;  /* vàng nhạt để nổi bật trên nền xanh */
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -125,11 +150,11 @@
       <h2>Giới Thiệu Dự Án & Vai Trò Cá Nhân</h2>
       
       <p>
-        Đây là dự án môn Khoa Học Dữ Liệu được thực hiện bởi <strong>Nhóm 01</strong>, sinh viên ngành Thương mại điện tử – Trường Đại học Kinh tế TP. Hồ Chí Minh (UEH). Mục đích của dự án là xây dựng một hệ thống phân tích, trực quan hóa và dự đoán để hỗ trợ doanh nghiệp tối ưu chiến lược kinh doanh trên sàn thương mại điện tử.
+        Đây là dự án môn Khoa Học Dữ Liệu được thực hiện bởi <strong>Nhóm sinh viên ngành Thương mại điện tử</strong>, Trường Đại học Kinh tế TP. Hồ Chí Minh (UEH). Mục đích của dự án là xây dựng một hệ thống phân tích, trực quan hóa và dự đoán để hỗ trợ doanh nghiệp tối ưu chiến lược kinh doanh trên sàn thương mại điện tử.
       </p>
 
       <p>
-        Trong nhóm có 5 thành viên, và <strong>Phan Công Nguyên</strong> (tên tôi) đảm nhận các công việc chính sau:
+        Trong nhóm có 5 thành viên, và <strong>Phan Công Nguyên</strong> (tôi) đảm nhận các công việc chính sau:
       </p>
       <ul>
         <li>
@@ -178,12 +203,14 @@
         </a>
       </p>
 
-      <!-- Nhúng toàn bộ PDF -->
-      <embed
-        src="Nhóm01.pdf"
-        type="application/pdf"
-        class="pdf-viewer"
-      />
+      <!-- Khung PDF Container để tạo hiệu ứng nổi bật -->
+      <div class="pdf-container">
+        <embed
+          src="Nhóm01.pdf"
+          type="application/pdf"
+          class="pdf-viewer"
+        />
+      </div>
     </section>
 
     <!-- ----------------------------------------------------- -->
@@ -205,6 +232,11 @@
     <!-- ----------------------------------------------------- -->
     <footer>
       <p>© 2025 Nhóm 01 – Khoa Công nghệ Thông tin Kinh doanh, UEH. Đã cập nhật lần cuối: 05/06/2025</p>
+      <p>
+        <a href="mailto:emailcuaban@example.com">emailcuaban@example.com</a> |
+        <a href="https://www.linkedin.com/in/username-cua-ban" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/username-cua-ban" target="_blank">GitHub</a>
+      </p>
     </footer>
   </div>
 </body>

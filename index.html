@@ -2,18 +2,216 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Project Khoa Học Dữ Liệu</title>
+  <title>Dự án Khoa Học Dữ Liệu – Nhóm UEH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; }
-    h1 { text-align: center; }
-    embed { display: block; margin: auto; }
+    /* --- CSS tạm thời; bạn có thể yêu cầu chỉnh sau --- */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 5px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 0.5rem;
+    }
+    header p.subtitle {
+      font-size: 1.125rem;
+      color: #555;
+    }
+    /* Phần Giới Thiệu */
+    .intro {
+      background-color: #f1f8ff;
+      border-left: 4px solid #004080;
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+    }
+    .intro h2 {
+      font-size: 1.75rem;
+      color: #004080;
+      margin-bottom: 0.75rem;
+    }
+    .intro p {
+      margin-bottom: 1rem;
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .intro ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .intro ul li {
+      margin-bottom: 0.5rem;
+      list-style: disc inside;
+    }
+    /* Phần Nội Dung (PDF) */
+    .content h2 {
+      font-size: 1.75rem;
+      color: #004080;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 0.25rem;
+    }
+    .content p {
+      margin-bottom: 1rem;
+    }
+    .pdf-viewer {
+      width: 100%;
+      height: 800px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    /* Phần Tài Liệu Liên quan */
+    .related h2 {
+      font-size: 1.75rem;
+      color: #004080;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 0.25rem;
+    }
+    .related p {
+      margin-bottom: 1rem;
+    }
+    .related a {
+      color: #0066cc;
+      font-weight: bold;
+    }
+    .related a:hover {
+      text-decoration: underline;
+    }
+    /* Footer đơn giản */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+    }
   </style>
 </head>
+
 <body>
-  <h1>Dự án Khoa Học Dữ Liệu</h1>
-  <p>Bấm vào đây để tải hoặc xem online dự án:</p>
-  <a href="Nhóm01.pdf" target="_blank">📄 Mở PDF dự án</a>
-  <hr />
-  <embed src="Nhóm01.pdf" type="application/pdf" width="100%" height="800px" />
+  <div class="container">
+    <!-- ----------------------------------------------------- -->
+    <!-- 1. HEADER -->
+    <!-- ----------------------------------------------------- -->
+    <header>
+      <h1>Dự án Khoa Học Dữ Liệu</h1>
+      <p class="subtitle">Nhóm sinh viên ngành Thương mại điện tử – Trường UEH</p>
+    </header>
+
+    <!-- ----------------------------------------------------- -->
+    <!-- 2. GIỚI THIỆU -->
+    <!-- ----------------------------------------------------- -->
+    <div class="intro">
+      <h2>Giới Thiệu Dự Án & Vai Trò Cá Nhân</h2>
+      
+      <p>
+        Đây là dự án môn Khoa Học Dữ Liệu được thực hiện bởi <strong>Nhóm 01</strong>, sinh viên ngành Thương mại điện tử – Trường Đại học Kinh tế TP. Hồ Chí Minh (UEH). Mục đích của dự án là xây dựng một hệ thống phân tích, trực quan hóa và dự đoán để hỗ trợ doanh nghiệp tối ưu chiến lược kinh doanh trên sàn thương mại điện tử.
+      </p>
+
+      <p>
+        Trong nhóm có 5 thành viên, và <strong>Phan Công Nguyên</strong> (tên tôi) đảm nhận các công việc chính sau:
+      </p>
+      <ul>
+        <li>
+          Xây dựng <strong>Dashboard tương tác</strong> để trực quan hóa các chỉ số quan trọng: giá sản phẩm, số lượng đánh giá, các hình thức giao hàng, khả năng cashback, video sản phẩm… 
+          Dashboard này cho phép lọc/so sánh nhanh chóng những yếu tố ảnh hưởng đến việc một sản phẩm có bán được hay không.
+        </li>
+        <li>
+          Phụ trách <strong>bài toán phát hiện đặc thù sản phẩm</strong> (điều kiện để sản phẩm dễ bán) thông qua kỹ thuật tiền xử lý, lựa chọn biến (feature selection) và phân tích cơ bản (Exploratory Data Analysis).
+        </li>
+        <li>
+          Thực hiện các bước <strong>Phân tích dữ liệu cơ bản (Basic EDA)</strong> nhằm khám phá mối quan hệ giữa các biến, phát hiện outlier, missing value trước khi đưa vào mô hình phức tạp hơn.
+        </li>
+      </ul>
+
+      <p>
+        Các thành viên khác trong nhóm chịu trách nhiệm:
+        <ul>
+          <li>Xử lý và làm sạch dữ liệu (Data Cleaning) từ nguồn “Vietnamese Tiki products – men bags” (Kaggle).</li>
+          <li>Xây dựng mô hình phân lớp (Classification) để dự đoán sản phẩm có khả năng bán được hay không với các thuật toán như Decision Tree, Logistic Regression, SVM.</li>
+          <li>Phân cụm (Clustering) sản phẩm để tìm nhóm sản phẩm có đặc điểm chung, từ đó đề xuất chiến lược marketing phù hợp.</li>
+        </ul>
+      </p>
+
+      <p>
+        Qua dự án, nhóm chúng tôi đã:
+        <ul>
+          <li>Thu thập và làm sạch thành công khoảng 1.029 bản ghi sản phẩm sau khi chọn lọc từ 4.235 bản ghi gốc.</li>
+          <li>Xây dựng dashboard giúp hiển thị trực quan: giá gốc, giá khuyến mãi, số lượng đánh giá, đánh giá trung bình, số video, hình thức giao hàng, số lượng bán, v.v.</li>
+          <li>Phát hiện đặc thù (insight) cho thấy: sản phẩm có <strong>video giới thiệu</strong> và <strong>đánh giá cao (>4.0)</strong> thường có khả năng bán cao hơn 30% so với nhóm còn lại.</li>
+          <li>Từ kết quả phân tích cơ bản, đã đề xuất doanh nghiệp tập trung đầu tư vào sản phẩm có “thương hiệu lớn”, “số lượng đánh giá > 100” và “video giới thiệu” để tăng khả năng tiếp cận khách hàng.</li>
+        </ul>
+      </p>
+
+      <p>
+        <strong>Thành viên thực hiện:</strong><br />
+        Võ Thanh Vũ (Nhóm trưởng), Phan Công Nguyên (Xây dựng Dashboard & Phát hiện đặc thù), Võ Trương Hiền Đạt, Nguyễn Đỗ Quang Hưng, Nguyễn Tất Quân.<br />
+        <strong>Giáo viên hướng dẫn:</strong> TS. Nguyễn Mạnh Tuấn.
+      </p>
+    </div>
+
+    <!-- ----------------------------------------------------- -->
+    <!-- 3. NỘI DUNG CHÍNH (EMBED PDF) -->
+    <!-- ----------------------------------------------------- -->
+    <section class="content">
+      <h2>Nội Dung Chi Tiết (Xem Toàn Bộ File PDF)</h2>
+      <p>Bạn có thể cuộn xuống để xem toàn bộ báo cáo dưới đây. Nếu muốn tải về, hãy nhấn vào nút “Tải PDF” bên dưới.</p>
+      
+      <!-- Nút tải PDF -->
+      <p>
+        <a href="Nhóm01.pdf" target="_blank" style="font-weight: bold; color: #004080;">
+          📥 Tải PDF dự án
+        </a>
+      </p>
+
+      <!-- Nhúng toàn bộ PDF -->
+      <embed
+        src="Nhóm01.pdf"
+        type="application/pdf"
+        class="pdf-viewer"
+      />
+    </section>
+
+    <!-- ----------------------------------------------------- -->
+    <!-- 4. TÀI LIỆU LIÊN QUAN -->
+    <!-- ----------------------------------------------------- -->
+    <section class="related">
+      <h2>4. Tài Liệu Liên Quan</h2>
+      <p>Nhóm chúng tôi đã sử dụng và tạo ra các tài liệu, dữ liệu hỗ trợ trong quá trình thực hiện dự án. Bạn có thể truy cập toàn bộ folder sau trên Google Drive để xem hoặc tải về:</p>
+      <p>
+        <a href="https://drive.google.com/drive/folders/1IhgtQPQVT2kxF2XZ4-qlaWm1WJ8L-Hfm?usp=sharing"
+           target="_blank">
+          📂 Link Google Drive – Tài liệu & Dữ liệu Dự án
+        </a>
+      </p>
+    </section>
+
+    <!-- ----------------------------------------------------- -->
+    <!-- 5. FOOTER -->
+    <!-- ----------------------------------------------------- -->
+    <footer>
+      <p>© 2025 Nhóm 01 – Khoa Công nghệ Thông tin Kinh doanh, UEH. Đã cập nhật lần cuối: 05/06/2025</p>
+    </footer>
+  </div>
 </body>
 </html>

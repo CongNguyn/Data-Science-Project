@@ -45,12 +45,12 @@
     }
 
     /* ========================================
-       HEADER STYLES (MÀU NỀN #fae1dd)
+       HEADER STYLES (NỀN ĐẬM & CHỮ SÁNG)
     ======================================== */
     header {
       position: relative;
       text-align: center;
-      background-color: #fae1dd; /* Nền mới */
+      background-color: #274c77; /* Nền đậm để nổi chữ */
       padding: 4rem 1rem 2rem;
       border-radius: 0 0 5px 5px;
       overflow: hidden;
@@ -60,23 +60,23 @@
     header h1 {
       margin: 0;
       font-size: 3rem;
-      color: #fec89a; /* Màu “Dự án Khoa Học Dữ Liệu” */
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      color: #fff; /* Đổi chữ sang trắng để nổi trên nền đậm */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
     header p.subtitle {
       margin-top: 0.75rem;
       font-size: 1.25rem;
-      color: #ffd7ba; /* Màu tên đề tài */
+      color: #f8edeb; /* Chữ sắc nhạt bật trên nền đậm */
       font-weight: bold;
       margin-bottom: 1.5rem;
     }
 
-    /* Decorative underline dưới tiêu đề */
+    /* Decorative underline */
     header .underline {
       width: 80px;
       height: 4px;
-      background-color: #d8e2dc; /* Màu đậm mới */
+      background-color: #d8e2dc;
       margin: 0.75rem auto;
       border-radius: 2px;
     }
@@ -93,29 +93,15 @@
     }
 
     /* ========================================
-       SECTION SEPARATOR
-    ======================================== */
-    .section-separator {
-      width: 100%;
-      height: 8px;
-      background: linear-gradient(
-        90deg,
-        #d8e2dc 0%,
-        #e8e8e4 100%
-      ); /* Từ đậm xuống mờ */
-      margin: 2rem 0;
-      border-radius: 4px;
-    }
-
-    /* ========================================
        INTRO STYLES (MÀU NỀN #f8edeb)
     ======================================== */
     .intro {
-      background-color: #f8edeb; /* Nền intro mới */
-      border-left: 4px solid #d8e2dc; /* Đường gạch đậm mới */
+      background-color: #f8edeb; /* Nền intro */
+      border-left: 4px solid #d8e2dc; /* Đường gạch đậm */
       padding: 1.5rem 1.25rem;
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: -2rem; /* Kéo lên để overlap nhẹ với wave */
     }
 
     .intro h2 {
@@ -150,7 +136,7 @@
       font-size: 1.75rem;
       color: #274c77;
       margin-bottom: 0.75rem;
-      border-bottom: 2px solid #d8e2dc; /* Đường gạch đậm mới */
+      border-bottom: 2px solid #d8e2dc;
       padding-bottom: 0.25rem;
     }
 
@@ -185,7 +171,7 @@
       font-size: 1.75rem;
       color: #274c77;
       margin-bottom: 0.75rem;
-      border-bottom: 2px solid #d8e2dc; /* Đường gạch đậm mới */
+      border-bottom: 2px solid #d8e2dc;
       padding-bottom: 0.25rem;
     }
 
@@ -208,7 +194,7 @@
       text-align: center;
       font-size: 0.9rem;
       color: #fff;
-      background-color: #FEC5BB; /* Nền footer mới */
+      background-color: #FEC5BB; /* Footer nền đậm */
       margin-top: 3rem;
       padding: 1rem 0;
       border-radius: 0 0 5px 5px;
@@ -254,9 +240,6 @@
     </svg>
   </header>
 
-  <!-- SECTION SEPARATOR (giữa header và main) -->
-  <div class="section-separator"></div>
-
   <!-- MAIN CONTAINER -->
   <div class="container">
 
@@ -299,9 +282,6 @@
       </p>
     </div>
 
-    <!-- SECTION SEPARATOR GIỮA INTRO VÀ CONTENT -->
-    <div class="section-separator"></div>
-
     <!-- CONTENT (PDF EMBED) -->
     <section class="content">
       <h2>Nội Dung Chi Tiết (Vui Lòng Xem Toàn Bộ File PDF)</h2>
@@ -315,9 +295,6 @@
         <embed src="Nhóm01.pdf" type="application/pdf" class="pdf-viewer" />
       </div>
     </section>
-
-    <!-- SECTION SEPARATOR GIỮA CONTENT VÀ RELATED -->
-    <div class="section-separator"></div>
 
     <!-- RELATED DOCUMENTS -->
     <section class="related">
